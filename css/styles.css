@@ -1,0 +1,28 @@
+body{
+    background-color: #e0d9c5;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+}
+
+h1{
+    font-family: 'Heebo', sans-serif;
+    margin-top: 5%;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+}
+
+.col{
+    margin-bottom: 5%;
+}
+
+#id{
+
+    margin-bottom: 20%;
+}
+
+.display-none{
+    display: none;
+}

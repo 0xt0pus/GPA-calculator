@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--Google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Roboto&display=swap" rel="stylesheet">
+
+
+
+
+    <title>GPA Calculator!</title>
+  </head>
+  <body>
+ 
+    <div class="container">
+        <br>
+
+        <h1>GPA Calculator</h1>
+        <p>Calculate your college GPA.</p>
+
+        <hr>
+
+  
+        <div class="row">
+            <div class="col col-lg-3 col-md-4 col-12 col-sm-6 form-group ">
+                    <label for="coursen">Course Name</label>
+                    <input type="text" class="form-control courseName"   id="course-name" placeholder="Enter Course Name">
+            </div>
+
+
+            <div class="col col-lg-3 col-md-4 col-12 col-sm-6 form-group" >
+                    <label for="course-name">Credit hour</label>
+                    <input type="number" class="form-control" placeholder="Credit hour" id="creadit-hour" min="1" max="5">
+            </div>
+
+
+            <div class="col col-lg-3 col-md-4 col-12 col-sm-6">
+
+                <label for="course-name">Grade</label>
+                <div >
+                    <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
+                    <select class="form-control" id="grade">Options
+                    <option>A+/A</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B</option>
+                    <option>B-</option>
+                    <option>C+</option>
+                    <option>C</option>
+                    <option>C-</option>
+                    <option>D</option>
+                    <option>F</option>
+                    <option>S</option>
+            
+
+                </select>
+                </div>
+            </div>
+
+
+            <div class="col col-lg-3 col-md-4 col-12 col-sm-6">
+                <label for="course-name">Add course</label>
+
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary" value="Add" id="add">Add</button>
+                    </div>
+            </div>
+        </div>
+
+
+
+<table id="table" class="table table-bordered display-none">
+            <thead>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+        
+            </tbody>
+            <tfoot id="tfoot">
+        
+            </tfoot>
+        </table>
+
+
+
+
+        <div class="row">
+            <div class="col">
+                <input id="calc-gp" class="btn btn-success display-none" type="button" value="Calc GP">
+            </div>
+            <div class="col">
+            <input id="clear" class="btn btn-warning display-none" type="button" value="Clear">
+            </div>
+        </div>
+
+
+        
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+
+
+  <!-- <footer>Created By Muhammad Yaqoob 😊</footer> -->
+</html>
