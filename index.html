@@ -38,8 +38,8 @@
 
 
             <div class="col col-lg-3 col-md-4 col-12 col-sm-6 form-group" >
-                    <label for="course-name">Credit hour</label>
-                    <input type="number" class="form-control" placeholder="Credit hour" id="creadit-hour" min="1" max="5">
+                    <label for="course-name">Credit hours</label>
+                    <input type="number" class="form-control" placeholder="Credit hours" id="credithour" min="1" max="5">
             </div>
 
 
@@ -49,19 +49,19 @@
                 <div >
                     <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
                     <select class="form-control" id="grade">Options
-                    <option>A+/A</option>
-                    <option>A-</option>
-                    <option>B+</option>
-                    <option>B</option>
-                    <option>B-</option>
-                    <option>C+</option>
-                    <option>C</option>
-                    <option>C-</option>
-                    <option>D</option>
+                    <option value="4">A+/A</option>
+                    <option value="3.67">A-</option>
+                    <option value="3.33">B+</option>
+                    <option value="3.0">B</option>
+                    <option value="2.67">B-</option>
+                    <option value="2.33">C+</option>
+                    <option value="2.0">C</option>
+                    <option value="1.67">C-</option>
+                    <option value="1.33">D+</option>
+                    <option value="1">D</option>
                     <option>F</option>
-                    <option>S</option>
-            
-
+                    <option>S </option>
+                    <option>U </option>
                 </select>
                 </div>
             </div>
@@ -99,7 +99,7 @@
 
         <div class="row">
             <div class="col">
-                <input id="calc-gp" class="btn btn-success display-none" type="button" value="Calc GP">
+                <input id="calc-gpa" class="btn btn-success display-none" type="button" value="Calculate GPA">
             </div>
             <div class="col">
             <input id="clear" class="btn btn-warning display-none" type="button" value="Clear">
@@ -107,20 +107,8 @@
         </div>
 
 
-        
-
-
-
-
-
-
     </div>
 
-
-
-
-
-    
 
 
 
@@ -159,5 +147,5 @@
   </body>
 
 
-  <!-- <footer>Created By Muhammad Yaqoob 😊</footer> -->
+  <footer>Created By Muhammad Yaqoob 😊</footer>
 </html>
