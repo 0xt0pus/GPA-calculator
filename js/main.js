@@ -12,102 +12,19 @@ let gpaArray = [];
 
 add.addEventListener("click",addButtonPressed);
 
-var finalGpa=calculateGpa.addEventListener("click",calculateMyGPA);
+calculateGpa.addEventListener("click",calculateMyGPA);
 
-
-
-
-
-
-
-
-function calculateMyGPA()
-{
-
-
-    var totalCreaditHours=0;
-    var totalgrades=0;
-    
-    
-    
-    
-    var allvalues=[];
-    var first;
-    var second;
-    var third;
-
-
-
-    for(var i=0; i<gpaArray.length;i++)
-    {
-
-
-
-        totalCreaditHours+=Number(gpaArray[i].creaditHours);
-        
-        first=Number(gpaArray[i].creaditHours);
-        second=Number(gpaArray[i].grades);
-
-        third=first*second;
-        totalgrades+=third;
-
-
-    }
-
-
-    var soFinalGpa=totalgrades/totalCreaditHours;
-    alert("Your Final GPA is "+soFinalGpa);
-    return soFinalGpa;
-   
-
-   
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+clear.addEventListener("click",clearAll);
 
 
 
 
 function addButtonPressed()
 {
+
+    if (tfoot.querySelector("tr") !== null) {
+        tfoot.querySelector("tr").remove();
+    }
 
     if(courseName.value==="" || creditHour.value<=0 || creditHour.value>4)
     {
@@ -154,5 +71,75 @@ function addButtonPressed()
 }
 
 
+function calculateMyGPA()
+{
 
+
+    var totalCreaditHours=0;
+    var totalgrades=0;
+    
+    var allvalues=[];
+    var first;
+    var second;
+    var third;
+
+
+
+    for(var i=0; i<gpaArray.length;i++)
+    {
+
+        totalCreaditHours+=Number(gpaArray[i].creaditHours);
+        first=Number(gpaArray[i].creaditHours);
+        second=Number(gpaArray[i].grades);
+        third=first*second;
+        totalgrades+=third;
+    }
+
+    var soFinalGpa=totalgrades/totalCreaditHours;
+    soFinalGpa=soFinalGpa.toFixed(3);
+
+    const tr=document.createElement("tr");
+    const td=document.createElement("td");
+
+    if (tfoot.querySelector("tr") !== null) {
+        tfoot.querySelector("tr").remove();
+    }
+
+    if(soFinalGpa>3.5)
+    {
+       
+        td.innerHTML="Your GPA is "+soFinalGpa+"  Great! Kepp it up💪";
+    }
+    else if(soFinalGpa<2)
+    {
+       
+        td.innerHTML="Your GPA is "+soFinalGpa+"     Work Hard! :(";
+    }
+    else{
+        
+        td.innerHTML="Your GPA is "+soFinalGpa;
+    }
+
+    td.setAttribute("colspan", "3");
+    td.setAttribute("class", "democlass");
+
+    tr.appendChild(td);
+    tfoot.appendChild(tr);   
+}
+
+
+function clearAll()
+{
+    gpaArray = [];
+  
+    tbody.querySelectorAll("*").forEach((child) => child.remove());
+    if (tfoot.querySelector("tr") !== null) {
+      tfoot.querySelector("tr").remove();
+    }
+  
+    table.classList.add("display-none");
+    calculateGpa.classList.add("display-none");
+    clear.classList.add("display-none");
+
+}
 
