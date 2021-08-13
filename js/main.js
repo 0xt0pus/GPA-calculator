@@ -61,7 +61,7 @@ function addButtonPressed()
 
             });
 
-        console.log(gpaArray);
+
 
         courseName.value="";
         creditHour.value="";
